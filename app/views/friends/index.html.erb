@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Birthdate</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @friends.each do |friend| %>
+    <tr class="py-4">
+      <td><%= friend.id %></td>
+      <td><%=link_to friend.first_name + ' ' + friend.last_name, friend %></td>
+      <td><%= friend.birthdate %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
